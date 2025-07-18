@@ -1,0 +1,73 @@
+@import 'vars';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+a {
+    text-decoration: none; // убрать нижнее подчеркивание у ссылок
+}
+
+button {
+    font: inherit; // заказной шрифт на все кнопки
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap; // ПЕРЕНОС (ИМЕТЬ В ВИДУ)
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF;
+    padding-top: 33px;
+    padding-bottom: 35px;
+    &__logo-img {
+        display: block;
+    }
+    &__menu-wrapper {
+        display: flex;
+        flex-flow: row wrap; // ПЕРЕНОС (ИМЕТЬ В ВИДУ)
+        gap: 48px;
+        align-items: center;
+    }
+    &__menu {
+        display: flex;
+        flex-flow: row wrap; // ПЕРЕНОС (ИМЕТЬ В ВИДУ)
+        gap: 48px;
+    }
+    &__menu-link {
+        color: $color-text;
+        font-size: $font-size-text;
+        font-style: normal;
+        font-weight: 600;
+    }
+    &__button {
+        border-radius: 24px;
+        border: 1px solid $color-button;
+        background-color: transparent;
+        display: inline-flex;
+        padding: 16px 36px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: #A26539;
+        font-family: "Montserrat Alternates";
+        font-size: $font-size-text;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        &:hover {
+            background-color: $color-button;
+            color: #FFF;
+        }
+    }
+}
