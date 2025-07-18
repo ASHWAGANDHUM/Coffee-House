@@ -72,11 +72,12 @@ button {
     }
 }
 
-.top {
+.background {
     background-color: $bgc-main;
+    position: relative;
 }
 
-.top-content {
+.top {
     padding-top: 118px;
     padding-bottom: 208px;
     display: flex;
@@ -127,5 +128,33 @@ button {
         color: $color-button;
         font-size: $font-size-text;
         font-weight: 600;
+    }
+}
+
+.top-images {
+    &__table {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    &__cup {
+        position: absolute;
+        top: 0px;
+        right: 248px;
+    }
+    &__grains {
+        position: absolute;
+        top: 56px;
+        right: 102px;
+    }
+    &__cookie {
+        position: absolute;
+        top: 366px;
+        right: 384px;
+    }
+    &__synnabon {
+        position: absolute;
+        top: 195px;
+        right: 0px;
     }
 }

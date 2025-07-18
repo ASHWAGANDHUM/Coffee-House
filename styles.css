@@ -70,51 +70,52 @@ button {
   color: #FFF;
 }
 
-.top {
+.background {
   background-color: #F6F5F4;
+  position: relative;
 }
 
-.top-content {
+.top {
   padding-top: 118px;
   padding-bottom: 208px;
   display: flex;
   flex-flow: column wrap;
   gap: 40px;
 }
-.top-content__text {
+.top__text {
   display: flex;
   flex-flow: column wrap;
   gap: 24px;
   width: 586px;
 }
-.top-content__title {
+.top__title {
   font-size: 48px;
   font-weight: 700;
   width: 95%;
   color: #45403D;
 }
-.top-content__title-mark {
+.top__title-mark {
   font-weight: 400;
 }
-.top-content__subtitle {
+.top__subtitle {
   font-size: 24px;
   font-weight: 600;
   width: 498px;
   color: #45403D;
 }
-.top-content__desc-wrapper {
+.top__desc-wrapper {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
   height: 127px;
 }
-.top-content__desc {
+.top__desc {
   font-style: 16px;
   font-weight: 400;
   width: 498px;
   color: #45403D;
 }
-.top-content__button {
+.top__button {
   border-radius: 24px;
   border: 1px solid #A26539;
   display: flex;
@@ -126,4 +127,30 @@ button {
   color: #A26539;
   font-size: 16px;
   font-weight: 600;
+}
+
+.top-images__table {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.top-images__cup {
+  position: absolute;
+  top: 0px;
+  right: 248px;
+}
+.top-images__grains {
+  position: absolute;
+  top: 56px;
+  right: 102px;
+}
+.top-images__cookie {
+  position: absolute;
+  top: 366px;
+  right: 384px;
+}
+.top-images__synnabon {
+  position: absolute;
+  top: 195px;
+  right: 0px;
 }/*# sourceMappingURL=styles.css.map */
