@@ -68,4 +68,43 @@ button {
 .header__button:hover {
   background-color: #A26539;
   color: #FFF;
+}
+
+.top {
+  background-color: #F6F5F4;
+}
+
+.top-content {
+  padding-top: 118px;
+  padding-bottom: 208px;
+}
+.top-content__text {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 24px;
+  width: 586px;
+}
+.top-content__title {
+  font-size: 48px;
+  font-weight: 700;
+  width: 95%;
+  color: #45403D;
+}
+.top-content__subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  width: 498px;
+  color: #45403D;
+}
+.top-content__desc-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 127px;
+}
+.top-content__desc {
+  font-style: 16px;
+  font-weight: 400;
+  width: 498px;
+  color: #45403D;
 }/*# sourceMappingURL=styles.css.map */

@@ -71,3 +71,42 @@ button {
         }
     }
 }
+
+.top {
+    background-color: $bgc-main;
+}
+
+.top-content {
+    padding-top: 118px;
+    padding-bottom: 208px;
+    &__text {
+        display: flex;
+        flex-flow: column wrap; // ПЕРЕНОС (ИМЕТЬ В ВИДУ)
+        gap: 24px;
+        width: 586px;
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        width: 95%;
+        color: $color-text;
+    }
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 600;
+        width: 498px;
+        color: $color-text;
+    }
+    &__desc-wrapper {
+        display: flex;
+        flex-flow: column wrap; // ПЕРЕНОС (ИМЕТЬ В ВИДУ)
+        justify-content: space-between;
+        height: 127px;
+    }
+    &__desc {
+        font-style: 16px;
+        font-weight: 400;
+        width: 498px;
+        color: $color-text;
+    }
+}
