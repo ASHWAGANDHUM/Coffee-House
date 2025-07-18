@@ -64,6 +64,7 @@ button {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  transition: 0.5s ease;
 }
 .header__button:hover {
   background-color: #A26539;
@@ -73,6 +74,7 @@ button {
 .background {
   background-color: #F6F5F4;
   position: relative;
+  overflow-x: hidden;
 }
 
 .top {
@@ -127,6 +129,11 @@ button {
   color: #A26539;
   font-size: 16px;
   font-weight: 600;
+  transition: 0.5s ease;
+}
+.top__button:hover {
+  background-color: #A26539;
+  color: #FFF;
 }
 
 .top-images__table {
@@ -138,6 +145,10 @@ button {
   position: absolute;
   top: 0px;
   right: 248px;
+  transition: 0.5s ease;
+}
+.top-images__cup:hover {
+  transform: rotate(-10.437deg);
 }
 .top-images__grains {
   position: absolute;
@@ -148,9 +159,17 @@ button {
   position: absolute;
   top: 366px;
   right: 384px;
+  transition: 0.5s ease;
+}
+.top-images__cookie:hover {
+  transform: rotate(-18.367deg);
 }
 .top-images__synnabon {
   position: absolute;
   top: 195px;
   right: 0px;
+  transition: 0.5s ease;
+}
+.top-images__synnabon:hover {
+  transform: rotate(-16.355deg);
 }/*# sourceMappingURL=styles.css.map */

@@ -65,6 +65,7 @@ button {
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+        transition: 0.5s ease;
         &:hover {
             background-color: $color-button;
             color: #FFF;
@@ -75,6 +76,7 @@ button {
 .background {
     background-color: $bgc-main;
     position: relative;
+    overflow-x: hidden;
 }
 
 .top {
@@ -128,6 +130,11 @@ button {
         color: $color-button;
         font-size: $font-size-text;
         font-weight: 600;
+        transition: 0.5s ease;
+        &:hover {
+            background-color: $color-button;
+            color: #FFF;
+        }
     }
 }
 
@@ -141,6 +148,10 @@ button {
         position: absolute;
         top: 0px;
         right: 248px;
+        transition: 0.5s ease;
+        &:hover {
+            transform: rotate(-10.437deg);
+        }
     }
     &__grains {
         position: absolute;
@@ -151,10 +162,18 @@ button {
         position: absolute;
         top: 366px;
         right: 384px;
+        transition: 0.5s ease;
+        &:hover {
+            transform: rotate(-18.367deg);
+        }
     }
     &__synnabon {
         position: absolute;
         top: 195px;
         right: 0px;
+        transition: 0.5s ease;
+        &:hover {
+            transform: rotate(-16.355deg);
+        }
     }
 }
