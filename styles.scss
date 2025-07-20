@@ -105,12 +105,14 @@ button {
         font-weight: 600;
         width: 498px;
         color: $color-text;
+        width: 498px;
     }
     &__desc-wrapper {
         display: flex;
         flex-flow: column wrap; // ПЕРЕНОС (ИМЕТЬ В ВИДУ)
         justify-content: space-between;
         height: 127px;
+        width: 498px;
     }
     &__desc {
         font-style: $font-size-text;
@@ -174,6 +176,62 @@ button {
         transition: 0.5s ease;
         &:hover {
             transform: rotate(-16.355deg);
+        }
+    }
+}
+
+.about-us {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    &__title {
+        color: $color-text;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 48px;
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+.card {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    max-width: 584px;
+    border-radius: 24px 24px 24px 0px;
+    background: #FFF;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
+    &__image {
+        width: 100%;
+        max-width: 292px;
+        object-fit: cover;
+        display: block;
+        border-radius: 24px 0px 0px 0px;
+        background: #DEDEDE; // цвет уголка слева вверху
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 20px;
+    }
+    &__title {
+        // align-self: stretch;
+        color: $color-text;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    &__desc {
+        font-size: 14px;
+        font-weight: 400;
+        &_top {
+            margin-bottom: 10px; // сравнить по факту
         }
     }
 }
