@@ -88,7 +88,7 @@ button {
     &__text {
         display: flex;
         flex-flow: column wrap; // ПЕРЕНОС (ИМЕТЬ В ВИДУ)
-        gap: 24px;
+        gap: 26px; // на 2px больше того, что пишут в макете.
         width: 586px;
     }
     &__title {
@@ -108,17 +108,17 @@ button {
         width: 498px;
     }
     &__desc-wrapper {
-        display: flex;
-        flex-flow: column wrap; // ПЕРЕНОС (ИМЕТЬ В ВИДУ)
-        justify-content: space-between;
-        height: 127px;
-        width: 498px;
+        width: 100%;
+        max-width: 498px;
     }
     &__desc {
-        font-style: $font-size-text;
+        font-size: $font-size-text;
         font-weight: 400;
-        width: 498px;
         color: $color-text;
+        line-height: 1.221; // точность (излишняя?)
+        &:first-child{
+            margin-bottom: 8px;
+        }
     }
     &__button {
         border-radius: 24px;
@@ -148,8 +148,8 @@ button {
     }
     &__cup {
         position: absolute;
-        top: 0px;
-        right: 248px;
+        top: -1px;
+        right: 245px;
         transition: 0.5s ease;
         &:hover {
             transform: rotate(-10.437deg);
@@ -157,13 +157,13 @@ button {
     }
     &__grains {
         position: absolute;
-        top: 56px;
-        right: 102px;
+        top: 57px;
+        right: 101px;
     }
     &__cookie {
         position: absolute;
-        top: 366px;
-        right: 384px;
+        top: 367px;
+        right: 385px;
         transition: 0.5s ease;
         &:hover {
             transform: rotate(-18.367deg);
@@ -171,7 +171,7 @@ button {
     }
     &__synnabon {
         position: absolute;
-        top: 195px;
+        top: 200px;
         right: 0px;
         transition: 0.5s ease;
         &:hover {
@@ -228,7 +228,7 @@ button {
         font-weight: 600;
     }
     &__desc-box {
-        padding-right: 2px;
+        // пока пусто, в случае чего - убрать, ибо блок ради позиционирования
     }
     &__desc {
         font-size: 14px;

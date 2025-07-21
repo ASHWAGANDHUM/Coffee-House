@@ -87,7 +87,7 @@ button {
 .top__text {
   display: flex;
   flex-flow: column wrap;
-  gap: 24px;
+  gap: 26px;
   width: 586px;
 }
 .top__title {
@@ -107,17 +107,17 @@ button {
   width: 498px;
 }
 .top__desc-wrapper {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  height: 127px;
-  width: 498px;
+  width: 100%;
+  max-width: 498px;
 }
 .top__desc {
-  font-style: 16px;
+  font-size: 16px;
   font-weight: 400;
-  width: 498px;
   color: #45403D;
+  line-height: 1.221;
+}
+.top__desc:first-child {
+  margin-bottom: 8px;
 }
 .top__button {
   border-radius: 24px;
@@ -145,8 +145,8 @@ button {
 }
 .top-images__cup {
   position: absolute;
-  top: 0px;
-  right: 248px;
+  top: -1px;
+  right: 245px;
   transition: 0.5s ease;
 }
 .top-images__cup:hover {
@@ -154,13 +154,13 @@ button {
 }
 .top-images__grains {
   position: absolute;
-  top: 56px;
-  right: 102px;
+  top: 57px;
+  right: 101px;
 }
 .top-images__cookie {
   position: absolute;
-  top: 366px;
-  right: 384px;
+  top: 367px;
+  right: 385px;
   transition: 0.5s ease;
 }
 .top-images__cookie:hover {
@@ -168,7 +168,7 @@ button {
 }
 .top-images__synnabon {
   position: absolute;
-  top: 195px;
+  top: 200px;
   right: 0px;
   transition: 0.5s ease;
 }
@@ -224,9 +224,6 @@ button {
   color: #45403D;
   font-size: 24px;
   font-weight: 600;
-}
-.card__desc-box {
-  padding-right: 2px;
 }
 .card__desc {
   font-size: 14px;
