@@ -220,14 +220,19 @@ button {
   padding: 20px;
 }
 .card__title {
+  align-self: stretch;
   color: #45403D;
   font-size: 24px;
   font-weight: 600;
 }
+.card__desc-box {
+  padding-right: 2px;
+}
 .card__desc {
   font-size: 14px;
   font-weight: 400;
+  line-height: 1.2;
 }
-.card__desc_top {
-  margin-bottom: 10px;
+.card__desc:not(:last-child) {
+  margin-bottom: 8px;
 }/*# sourceMappingURL=styles.css.map */

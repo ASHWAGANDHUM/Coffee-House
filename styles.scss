@@ -222,16 +222,20 @@ button {
         padding: 20px;
     }
     &__title {
-        // align-self: stretch;
+        align-self: stretch;
         color: $color-text;
         font-size: 24px;
         font-weight: 600;
     }
+    &__desc-box {
+        padding-right: 2px;
+    }
     &__desc {
         font-size: 14px;
         font-weight: 400;
-        &_top {
-            margin-bottom: 10px; // сравнить по факту
+        line-height: 1.2; // пока так, надо решить проблему эффективнее
+        &:not(:last-child) {
+            margin-bottom: 8px; // сравнить по факту
         }
     }
 }
