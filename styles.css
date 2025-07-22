@@ -239,22 +239,22 @@ button {
   margin-bottom: 8px;
 }
 
-.menu-coffee {
+.menu {
   padding-top: 64px;
   padding-bottom: 64px;
 }
-.menu-coffee__heading {
+.menu__heading {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.menu-coffee__button-container {
+.menu__button-container {
   display: flex;
   flex-direction: row;
   gap: 7px;
 }
-.menu-coffee__button {
+.menu__button {
   border-radius: 24px;
   border: 1px solid #A26539;
   background-color: transparent;
@@ -271,11 +271,11 @@ button {
   line-height: normal;
   transition: 0.5s ease;
 }
-.menu-coffee__button:hover {
+.menu__button:hover {
   background-color: #A26539;
   color: #FFF;
 }
-.menu-coffee__cards {
+.menu__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
@@ -289,6 +289,9 @@ button {
   border-radius: 24px;
   background: #FFF;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
+}
+.menu-card__image {
+  border-radius: 24px 24px 0px 0px;
 }
 .menu-card__content {
   display: flex;

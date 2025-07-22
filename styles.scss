@@ -245,7 +245,7 @@ button {
     }
 }
 
-.menu-coffee {
+.menu {
     padding-top: 64px;
     padding-bottom: 64px;
     &__heading {
@@ -296,7 +296,7 @@ button {
     background: #FFF;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
     &__image {
-        // посмотреь по ходу дела
+        border-radius: 24px 24px 0px 0px;
     }
     &__content {
         display: flex;
