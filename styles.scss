@@ -7,6 +7,7 @@
 
 body {
     font-family: "Montserrat Alternates", sans-serif;
+    padding-top: 120px; // отступ от фиксированного хедера
 }
 
 a {
@@ -23,6 +24,11 @@ button {
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0; // а надо ли?
+    right: 0; // а надо ли?
+    z-index: 1; // хедер должен быть поверх всех остальных элементов
     display: flex;
     flex-flow: row wrap; // ПЕРЕНОС (ИМЕТЬ В ВИДУ)
     justify-content: space-between;
@@ -55,14 +61,12 @@ button {
         border: 1px solid $color-button;
         background-color: transparent;
         display: inline-flex;
-        padding: 16px 36px;
         justify-content: center;
         align-items: center;
         gap: 10px;
+        padding: 15.5px 36px;
         color: $color-button;
-        font-family: "Montserrat Alternates";
         font-size: $font-size-text;
-        font-style: normal;
         font-weight: 600;
         line-height: normal;
         transition: 0.5s ease;
@@ -183,24 +187,25 @@ button {
 .about-us {
     padding-top: 64px;
     padding-bottom: 64px;
-    &__title {
-        color: $color-text;
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        margin-bottom: 48px;
-    }
     &__cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
+        margin-top: 48px;
     }
 }
 
-.card {
+.section-title {
+    color: $color-text;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.about-us-card {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     width: 100%;
     max-width: 584px;
     border-radius: 24px 24px 24px 0px;
@@ -231,11 +236,91 @@ button {
         // пока пусто, в случае чего - убрать, ибо блок ради позиционирования
     }
     &__desc {
-        font-size: 14px;
+        font-size: $font-size-text-small;
         font-weight: 400;
         line-height: 1.2; // пока так, надо решить проблему эффективнее
         &:not(:last-child) {
             margin-bottom: 8px; // сравнить по факту
         }
+    }
+}
+
+.menu-coffee {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    &__heading {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__button-container {
+        display: flex;
+        flex-direction: row;
+        gap: 7px;
+    }
+    &__button {
+        border-radius: 24px;
+        border: 1px solid $color-button;
+        background-color: transparent;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-top: 12.5px;
+        padding-bottom: 12.5px;
+        width: 120px;
+        color: $color-button;
+        font-size: $font-size-text-small;
+        font-weight: 600;
+        line-height: normal;
+        transition: 0.5s ease;
+        &:hover {
+            background-color: $color-button;
+            color: #FFF;
+        }
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        margin-top: 48px;
+    }
+}
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
+    &__image {
+        // посмотреь по ходу дела
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        padding: 0px 20px 20px 20px;
+    }
+    &__price {
+        color: $color-text;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: normal;
+    }
+    &__desc {
+        color: $color-text;
+        font-size: $font-size-text-small;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__vol {
+        color: $color-text-muted;
+        font-size: $font-size-text-small;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
 }

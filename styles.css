@@ -5,6 +5,7 @@
 
 body {
   font-family: "Montserrat Alternates", sans-serif;
+  padding-top: 120px;
 }
 
 a {
@@ -21,6 +22,11 @@ button {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -54,14 +60,12 @@ button {
   border: 1px solid #A26539;
   background-color: transparent;
   display: inline-flex;
-  padding: 16px 36px;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  padding: 15.5px 36px;
   color: #A26539;
-  font-family: "Montserrat Alternates";
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
   line-height: normal;
   transition: 0.5s ease;
@@ -180,30 +184,31 @@ button {
   padding-top: 64px;
   padding-bottom: 64px;
 }
-.about-us__title {
+.about-us__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.section-title {
   color: #45403D;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-bottom: 48px;
-}
-.about-us__cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
 }
 
-.card {
+.about-us-card {
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
   width: 100%;
   max-width: 584px;
   border-radius: 24px 24px 24px 0px;
   background: #FFF;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
 }
-.card__image {
+.about-us-card__image {
   width: 100%;
   max-width: 292px;
   -o-object-fit: cover;
@@ -212,24 +217,101 @@ button {
   border-radius: 24px 0px 0px 0px;
   background: #DEDEDE;
 }
-.card__content {
+.about-us-card__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 14px;
   padding: 20px;
 }
-.card__title {
+.about-us-card__title {
   align-self: stretch;
   color: #45403D;
   font-size: 24px;
   font-weight: 600;
 }
-.card__desc {
+.about-us-card__desc {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
 }
-.card__desc:not(:last-child) {
+.about-us-card__desc:not(:last-child) {
   margin-bottom: 8px;
+}
+
+.menu-coffee {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.menu-coffee__heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-coffee__button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+}
+.menu-coffee__button {
+  border-radius: 24px;
+  border: 1px solid #A26539;
+  background-color: transparent;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
+  width: 120px;
+  color: #A26539;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  transition: 0.5s ease;
+}
+.menu-coffee__button:hover {
+  background-color: #A26539;
+  color: #FFF;
+}
+.menu-coffee__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 24px;
+  background: #FFF;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
+}
+.menu-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 0px 20px 20px 20px;
+}
+.menu-card__price {
+  color: #45403D;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+}
+.menu-card__desc {
+  color: #45403D;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+.menu-card__vol {
+  color: #9A9A9A;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }/*# sourceMappingURL=styles.css.map */
