@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat Alternates", sans-serif;
     padding-top: 120px; // отступ от фиксированного хедера
@@ -70,6 +74,7 @@ button {
         font-weight: 600;
         line-height: normal;
         transition: 0.5s ease;
+        cursor: pointer;
         &:hover {
             background-color: $color-button;
             color: #FFF;
@@ -246,8 +251,8 @@ button {
 }
 
 .menu {
+    position: relative;
     padding-top: 64px;
-    padding-bottom: 64px;
     &__heading {
         display: flex;
         flex-direction: row;
@@ -275,7 +280,12 @@ button {
         font-weight: 600;
         line-height: normal;
         transition: 0.5s ease;
+        cursor: pointer;
         &:hover {
+            background-color: $color-button;
+            color: #FFF;
+        }
+        &_active {
             background-color: $color-button;
             color: #FFF;
         }
@@ -285,10 +295,24 @@ button {
         grid-template-columns: repeat(4, 1fr);
         gap: 32px;
         margin-top: 48px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+        pointer-events: none;
+        &_other {
+            position: absolute;
+            top: 122px;
+        }
+        &_show {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            pointer-events: auto;
+        }
     }
 }
 
-.menu-card {
+.product {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -324,3 +348,4 @@ button {
         line-height: normal;
     }
 }
+
