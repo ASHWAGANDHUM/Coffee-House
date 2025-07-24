@@ -22,6 +22,10 @@ button {
     font: inherit; // заказной шрифт на все кнопки
 }
 
+input {
+    font: inherit; // заказной шрифт на все кнопки
+}
+
 .center {
     padding-left: calc(50% - 600px);
     padding-right: calc(50% - 600px);
@@ -222,7 +226,6 @@ button {
         object-fit: cover;
         display: block;
         border-radius: 24px 0px 0px 0px;
-        background: #DEDEDE; // цвет уголка слева вверху
     }
     &__content {
         display: flex;
@@ -400,5 +403,101 @@ button {
         font-size: 14px;
         font-weight: 400;
         line-height: 1.215;
+    }
+}
+
+.contacts {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 32px;
+        margin-top: 48px;
+    }
+    &__left-column {
+        grid-column: span 4;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+        padding: 20px;
+        border-radius: 24px;
+        background: #FFF;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14);
+    }
+    &__card-title {
+        color: $color-text;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: normal;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        align-items: flex-start;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &__item {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        color: $color-text;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        font-style: normal;
+        &_font {
+            font-family: "Montserrat", sans-serif;
+        }
+        &:hover {
+            color: $color-button;
+        }
+    }
+    &__input-box {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        align-self: stretch;
+    }
+    &__input {
+        padding: 14px 48px 16px 24px;
+        border-radius: 24px;
+        border: 1px solid $color-border;
+        outline: none;
+        color: #9A9A9A;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.072;
+        color: $color-text;
+        &::placeholder {
+            color: $color-text-muted;
+        }
+    }
+    &__button {
+        align-self: stretch;
+        padding: 14px 48px 16px 48px;
+        border-radius: 24px;
+        border: 1px solid $color-button;
+        background-color: transparent;
+        color: $color-button;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.072;
+    }
+    &__map {
+        grid-column: span 8;
+        border-radius: 24px;
+        background: $color-button;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14);
     }
 }
