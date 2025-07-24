@@ -497,7 +497,11 @@ input {
     &__map {
         grid-column: span 8;
         border-radius: 24px;
-        background: $color-button;
-        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14);
+        overflow: hidden;      /* Обязательно скрыть выход за скругления */
+        box-shadow: 0 4px 20px 0 rgba(0,0,0,0.14);
     }
+}
+
+[class*="copyrights-pane"] {
+    display: none !important;
 }

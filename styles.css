@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -492,6 +493,10 @@ input {
 .contacts__map {
   grid-column: span 8;
   border-radius: 24px;
-  background: #A26539;
+  overflow: hidden; /* Обязательно скрыть выход за скругления */
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14);
+}
+
+[class*=copyrights-pane] {
+  display: none !important;
 }/*# sourceMappingURL=styles.css.map */
