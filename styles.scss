@@ -468,8 +468,8 @@ input {
     justify-content: space-between;
     align-items: flex-end;
     background-color: #FFF;
-    padding-top: 43px;
-    padding-bottom: 43px;
+    padding-top: 50px;
+    padding-bottom: 42px;
     &__logo-box {
         display: flex;
         flex-direction: column;
@@ -482,7 +482,7 @@ input {
         color: $color-text-muted;
         font-size: 14px;
         font-weight: 400;
-        line-height: normal;
+        line-height: 1;
     }
     &__menu-wrapper {
         display: flex;
@@ -493,7 +493,7 @@ input {
     &__menu {
         display: flex;
         flex-flow: row wrap;
-        gap: 48px;
+        gap: 24px;
     }
     &__menu-link {
         color: $color-text;
@@ -509,6 +509,10 @@ input {
     }
     &__icon {
         display: block;
+        color: $color-text;
+        &:hover {
+            color: $color-button;
+        }
     }
 }
 

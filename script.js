@@ -71,6 +71,40 @@ images.forEach((imgEl, index) => {
   });
 });
 
+function validateBookingForm() {
+  const name = document.getElementById('input-name').value.trim();
+  const phone = document.getElementById('input-phone').value.trim();
+
+  const cyrillicRegex = /^[А-Яа-яЁё\s]+$/;
+  if (!name) {
+    alert('Пожалуйста, введите имя');
+    return false;
+  }
+  if (!cyrillicRegex.test(name)) {
+    alert('Пожалуйста, введите имя только кириллицей, без цифр и символов');
+    return false;
+  }
+
+  const phoneDigits = phone.replace(/\D/g, '');
+  if (!phone) {
+    alert('Пожалуйста, введите номер телефона');
+    return false;
+  }
+  if (phoneDigits.length < 5) {
+    alert('Пожалуйста, введите корректный номер телефона');
+    return false;
+  }
+
+  return true;
+
+}
+
+document.getElementById('booking-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  if (validateBookingForm()) {
+    alert('Спасибо, ваша заявка принята!');
+  }
+});
 
 let place = [59.958021, 30.290751];
 

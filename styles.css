@@ -467,8 +467,8 @@ input {
   justify-content: space-between;
   align-items: flex-end;
   background-color: #FFF;
-  padding-top: 43px;
-  padding-bottom: 43px;
+  padding-top: 50px;
+  padding-bottom: 42px;
 }
 .footer__logo-box {
   display: flex;
@@ -482,7 +482,7 @@ input {
   color: #9A9A9A;
   font-size: 14px;
   font-weight: 400;
-  line-height: normal;
+  line-height: 1;
 }
 .footer__menu-wrapper {
   display: flex;
@@ -493,7 +493,7 @@ input {
 .footer__menu {
   display: flex;
   flex-flow: row wrap;
-  gap: 48px;
+  gap: 24px;
 }
 .footer__menu-link {
   color: #45403D;
@@ -509,6 +509,10 @@ input {
 }
 .footer__icon {
   display: block;
+  color: #45403D;
+}
+.footer__icon:hover {
+  color: #A26539;
 }
 
 [class*=copyrights-pane] {
