@@ -14,7 +14,6 @@ buttonToMenu.addEventListener('click', () => {
     });
 });
 
-
 const menuButtons = document.querySelectorAll('.menu__button');
 const menuCards = document.querySelectorAll('.menu__cards');
 
@@ -72,30 +71,42 @@ images.forEach((imgEl, index) => {
 });
 
 function validateBookingForm() {
-  const name = document.getElementById('input-name').value.trim();
-  const phone = document.getElementById('input-phone').value.trim();
+    const name = document.getElementById('input-name').value.trim();
+    const phone = document.getElementById('input-phone').value.trim();
 
-  const cyrillicRegex = /^[А-Яа-яЁё\s]+$/;
-  if (!name) {
-    alert('Пожалуйста, введите имя');
-    return false;
-  }
-  if (!cyrillicRegex.test(name)) {
-    alert('Пожалуйста, введите имя только кириллицей, без цифр и символов');
-    return false;
-  }
+    if (!name || !phone) {
+        alert('Пожалуйста, заполните обязательные поля: имя и номер телефона');
+        return false;
+    }
 
-  const phoneDigits = phone.replace(/\D/g, '');
-  if (!phone) {
-    alert('Пожалуйста, введите номер телефона');
-    return false;
-  }
-  if (phoneDigits.length < 5) {
-    alert('Пожалуйста, введите корректный номер телефона');
-    return false;
-  }
+    const cyrillicRegex = /^[А-Яа-яЁё\s]+$/;
+    const phoneDigits = phone.replace(/\D/g, '');
+    
+    if (!name) {
+        alert('Пожалуйста, введите имя');
+        return false;
+    }
 
-  return true;
+    if (!cyrillicRegex.test(name) && phoneDigits.length < 5) {
+        alert('Пожалуйста, введите корректные даныне имени и номера телефона.')
+        return false;
+    }
+
+    if (!cyrillicRegex.test(name)) {
+        alert('Пожалуйста, введите имя только кириллицей, без цифр и символов.');
+        return false;
+    }
+
+    if (!phone) {
+        alert('Пожалуйста, введите номер телефона');
+        return false;
+    }
+    if (phoneDigits.length < 5) {
+        alert('Пожалуйста, введите корректный номер телефона');
+        return false;
+    }
+
+    return true;
 
 }
 
@@ -103,6 +114,7 @@ document.getElementById('booking-form').addEventListener('submit', function (e) 
   e.preventDefault();
   if (validateBookingForm()) {
     alert('Спасибо, ваша заявка принята!');
+    this.reset();
   }
 });
 
