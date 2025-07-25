@@ -15,8 +15,8 @@ buttonToMenu.addEventListener('click', () => {
 });
 
 
-const menuButtons = document.querySelectorAll('.menu__button'); // NodeList с кнопками
-const menuCards = document.querySelectorAll('.menu__cards'); // NodeList с блоками карточек
+const menuButtons = document.querySelectorAll('.menu__button');
+const menuCards = document.querySelectorAll('.menu__cards');
 
 function showCardMenu(activeIndex) {
 
@@ -48,8 +48,6 @@ menuButtons.forEach((btn, index) => {
 
 });
 
-//////////////// НАЖАТИЕ НА ИЗОБРАЖЕНИЕ В ВЕРХНЕЙ ЧАСТИ САЙТА
-
 const images = [
     document.getElementById('coffee'),
     document.getElementById('desserts'),
@@ -64,10 +62,8 @@ images.forEach((imgEl, index) => {
         behavior: 'smooth'
     });
 
-    // Убираем активный класс со всех кнопок
     menuButtons.forEach(btn => btn.classList.remove('menu__button_active'));
 
-    // Немного ждем прокрутки и показываем нужный блок
     setTimeout(() => {
         menuButtons[index].classList.add('menu__button_active');
       showCardMenu(index);
@@ -75,7 +71,6 @@ images.forEach((imgEl, index) => {
   });
 });
 
-//////////////////// ЯНДЕКС.КАРТА
 
 let place = [59.958021, 30.290751];
 
@@ -92,13 +87,13 @@ function init() {
         iconImageOffset: [-18, -110]
     });
 
-    map.controls.remove('geolocationControl'); // удаляем геолокацию
-    map.controls.remove('searchControl'); // удаляем поиск
-    map.controls.remove('trafficControl'); // удаляем контроль трафика
-    map.controls.remove('typeSelector'); // удаляем тип
-    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-    map.controls.remove('zoomControl'); // даляем контроль зуммирования
-    map.controls.remove('rulerControl'); // удаляем контроль правил
+    map.controls.remove('geolocationControl');
+    map.controls.remove('searchControl');
+    map.controls.remove('trafficControl');
+    map.controls.remove('typeSelector');
+    map.controls.remove('fullscreenControl');
+    map.controls.remove('zoomControl');
+    map.controls.remove('rulerControl');
 
     map.geoObjects.add(placemark);
 }
