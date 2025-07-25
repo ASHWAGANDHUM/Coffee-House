@@ -18,9 +18,6 @@ a {
     text-decoration: none; // убрать нижнее подчеркивание у ссылок
 }
 
-button {
-    font: inherit; // заказной шрифт на все кнопки
-}
 
 input {
     font: inherit; // заказной шрифт на все кнопки
@@ -29,6 +26,23 @@ input {
 .center {
     padding-left: calc(50% - 600px);
     padding-right: calc(50% - 600px);
+}
+
+.button {                // ОБЩИЕ СТИЛИ ДЛЯ КНОПОК
+    font: inherit;
+    border-radius: 24px;
+    border: 1px solid $color-button;
+    background-color: transparent;
+    color: $color-button;
+    font-size: $font-size-text;
+    font-weight: 600;
+    line-height: normal;
+    transition: 0.5s ease;
+    cursor: pointer;
+    &:hover {
+        background-color: $color-button;
+        color: #FFF;
+    }
 }
 
 .header {
@@ -65,24 +79,7 @@ input {
         font-weight: 600;
     }
     &__button {
-        border-radius: 24px;
-        border: 1px solid $color-button;
-        background-color: transparent;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
         padding: 15.5px 36px;
-        color: $color-button;
-        font-size: $font-size-text;
-        font-weight: 600;
-        line-height: normal;
-        transition: 0.5s ease;
-        cursor: pointer;
-        &:hover {
-            background-color: $color-button;
-            color: #FFF;
-        }
     }
 }
 
@@ -134,22 +131,8 @@ input {
         }
     }
     &__button {
-        border-radius: 24px;
-        border: 1px solid $color-button;
-        display: flex;
         width: 366px;
         padding: 16px 36px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        color: $color-button;
-        font-size: $font-size-text;
-        font-weight: 600;
-        transition: 0.5s ease;
-        &:hover {
-            background-color: $color-button;
-            color: #FFF;
-        }
     }
 }
 
@@ -194,6 +177,7 @@ input {
 }
 
 .about-us {
+    scroll-margin-top: 120px; /* высота фиксированного хедера */
     padding-top: 64px;
     padding-bottom: 64px;
     &__cards {
@@ -257,6 +241,7 @@ input {
     position: relative;
     padding-top: 64px;
     padding-bottom: 64px;
+    scroll-margin-top: 120px; /* высота фиксированного хедера */
     &__heading {
         display: flex;
         flex-direction: row;
@@ -269,26 +254,10 @@ input {
         gap: 7px;
     }
     &__button {
-        border-radius: 24px;
-        border: 1px solid $color-button;
-        background-color: transparent;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
         padding-top: 12.5px;
         padding-bottom: 12.5px;
         width: 120px;
-        color: $color-button;
         font-size: $font-size-text-small;
-        font-weight: 600;
-        line-height: normal;
-        transition: 0.5s ease;
-        cursor: pointer;
-        &:hover {
-            background-color: $color-button;
-            color: #FFF;
-        }
         &_active {
             background-color: $color-button;
             color: #FFF;
@@ -354,6 +323,7 @@ input {
 }
 
 .reviews {
+    scroll-margin-top: 120px; /* высота фиксированного хедера */
     padding-top: 64px;
     padding-bottom: 64px;
     &__cards {
@@ -409,6 +379,7 @@ input {
 .contacts {
     padding-top: 64px;
     padding-bottom: 64px;
+    scroll-margin-top: 120px; /* высота фиксированного хедера */
     &__container {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -486,12 +457,7 @@ input {
     &__button {
         align-self: stretch;
         padding: 14px 48px 16px 48px;
-        border-radius: 24px;
-        border: 1px solid $color-button;
-        background-color: transparent;
-        color: $color-button;
-        font-size: 14px;
-        font-weight: 600;
+        font-size: $font-size-text-small;
         line-height: 1.072;
     }
     &__map {
@@ -499,6 +465,56 @@ input {
         border-radius: 24px;
         overflow: hidden;      /* Обязательно скрыть выход за скругления */
         box-shadow: 0 4px 20px 0 rgba(0,0,0,0.14);
+    }
+}
+
+.footer {
+    display: flex;
+    flex-flow: row wrap; // ПЕРЕНОС (ИМЕТЬ В ВИДУ)
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: #FFF;
+    padding-top: 43px;
+    padding-bottom: 43px;
+    &__logo-box {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+    &__logo-img {
+        display: block;
+    }
+    &__copyright {
+        color: $color-text-muted;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__menu-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: flex-end;
+    }
+    &__menu {
+        display: flex;
+        flex-flow: row wrap; // ПЕРЕНОС (ИМЕТЬ В ВИДУ)
+        gap: 48px;
+    }
+    &__menu-link {
+        color: $color-text;
+        font-size: $font-size-text-small;
+        font-style: normal;
+        font-weight: 600;
+    }
+    &__icon-box {
+        width: 42px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__icon {
+        display: block;
     }
 }
 

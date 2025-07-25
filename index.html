@@ -17,9 +17,9 @@
                 <a class="header__menu-link" href="#about-us">О нас</a>
                 <a class="header__menu-link" href="#menu">Меню</a>
                 <a class="header__menu-link" href="#reviews">Отзывы</a>
-                <a class="header__menu-link" href="">Контакты</a>
+                <a class="header__menu-link" href="#contacts">Контакты</a>
             </nav>
-            <button class="header__button">Связаться</button>
+            <button class="header__button button" id="contact-button">Связаться</button>
         </div>
     </header>
     <main class="background center">
@@ -32,14 +32,14 @@
                     <p class="top__desc">Мы предлагаем свежие зерна, уникальные авторские рецепты и заботу о природе. Наши бариста рады подарить вам вкус и уют, из-за которых захочется возвращаться снова и снова.</p>
                 </div>
             </div>
-            <button class="top__button">Посмотреть меню</button>
+            <button class="top__button button" id="menu-button">Посмотреть меню</button>
         </section>
         <div class="top-images">
             <img class="top-images__table" src="./images/top/table.png" alt="Кофейный столик">
-            <img class="top-images__cup" src="./images/top/cup.png" alt="Чашка">
+            <img class="top-images__cup" id="coffee" src="./images/top/cup.png" alt="Чашка">
             <img class="top-images__grains" src="./images/top/grains.png" alt="Зерна">
-            <img class="top-images__cookie" src="./images/top/cookie.png" alt="Печенье">
-            <img class="top-images__synnabon" src="./images/top/synnabon.png" alt="Синнабон">
+            <img class="top-images__cookie" id="snacks" src="./images/top/cookie.png" alt="Печенье">
+            <img class="top-images__synnabon" id="desserts" src="./images/top/synnabon.png" alt="Синнабон">
         </div>
         <section class="about-us" id="about-us">
             <h2 class="section-title">О нас</h2> <!--Переиспользуемый элемент-->
@@ -109,9 +109,9 @@
             <div class="menu__heading">
                 <h2 class="section-title">Меню</h2> <!--Переиспользуемый элемент-->
                 <div class="menu__button-container">
-                    <button class="menu__button">Кофе</button>
-                    <button class="menu__button">Десерты</button>
-                    <button class="menu__button">Закуски</button>
+                    <button class="menu__button button">Кофе</button>
+                    <button class="menu__button button">Десерты</button>
+                    <button class="menu__button button">Закуски</button> <!--А НУКА-->
                 </div>
             </div>
             <div class="menu__cards menu__cards_show"><!--Кофе-->
@@ -426,7 +426,7 @@
                 </article>
             </div>
         </section>
-        <section class="contacts"> <!--Подумать над названием класса-->
+        <section class="contacts" id="contacts"> <!--Подумать над названием класса-->
             <h2 class="section-title">Как нас найти</h2> <!--Переиспользуемый элемент-->
             <div class="contacts__container">
                 <div class="contacts__left-column">
@@ -454,13 +454,31 @@
                             <input class="contacts__input" type="tel" placeholder="Ваш номер телефона">
                             <input class="contacts__input" type="text" placeholder="Комментарий">
                         </div>
-                        <button class="contacts__button">Забронировать</button>
+                        <button class="contacts__button button">Забронировать</button>
                     </form>
                 </div>
                 <div class="contacts__map" id="map"></div>
             </div>
         </section>
     </main>
+    <footer class="footer center">
+        <div class="footer__logo-box">
+            <a class="footer__logo" href="index.html"><img class="header__logo-img" src="images/logo.svg" alt="Зернышко"></a>
+            <p class="footer__copyright">© 2025 Все права защищены</p>
+        </div>
+        <div class="footer__menu-wrapper">
+            <nav class="footer__menu">
+                <a class="footer__menu-link" href="#about-us">О нас</a>
+                <a class="footer__menu-link" href="#menu">Меню</a>
+                <a class="footer__menu-link" href="#reviews">Отзывы</a>
+                <a class="footer__menu-link" href="#contacts">Контакты</a>
+            </nav>
+            <div class="footer__icon-box">
+                <a href="index.html"><img class="footer__icon" src="./images/footer/vk.svg" alt="Вконтакте"></a>
+                <a href="index.html"><img class="footer__icon" src="./images/footer/inst.svg" alt="Инстаграм"></a>
+            </div>
+        </div>
+    </footer>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=6aba7869-f036-40cb-b08c-cb40a711534d&lang=ru_RU"></script>
     <script src="script.js"></script>
 </body>

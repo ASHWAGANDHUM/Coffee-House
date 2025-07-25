@@ -17,10 +17,6 @@ a {
   text-decoration: none;
 }
 
-button {
-  font: inherit;
-}
-
 input {
   font: inherit;
 }
@@ -28,6 +24,23 @@ input {
 .center {
   padding-left: calc(50% - 600px);
   padding-right: calc(50% - 600px);
+}
+
+.button {
+  font: inherit;
+  border-radius: 24px;
+  border: 1px solid #A26539;
+  background-color: transparent;
+  color: #A26539;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #A26539;
+  color: #FFF;
 }
 
 .header {
@@ -65,24 +78,7 @@ input {
   font-weight: 600;
 }
 .header__button {
-  border-radius: 24px;
-  border: 1px solid #A26539;
-  background-color: transparent;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
   padding: 15.5px 36px;
-  color: #A26539;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: normal;
-  transition: 0.5s ease;
-  cursor: pointer;
-}
-.header__button:hover {
-  background-color: #A26539;
-  color: #FFF;
 }
 
 .background {
@@ -134,22 +130,8 @@ input {
   margin-bottom: 8px;
 }
 .top__button {
-  border-radius: 24px;
-  border: 1px solid #A26539;
-  display: flex;
   width: 366px;
   padding: 16px 36px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  color: #A26539;
-  font-size: 16px;
-  font-weight: 600;
-  transition: 0.5s ease;
-}
-.top__button:hover {
-  background-color: #A26539;
-  color: #FFF;
 }
 
 .top-images__table {
@@ -191,6 +173,7 @@ input {
 }
 
 .about-us {
+  scroll-margin-top: 120px; /* высота фиксированного хедера */
   padding-top: 64px;
   padding-bottom: 64px;
 }
@@ -252,6 +235,7 @@ input {
   position: relative;
   padding-top: 64px;
   padding-bottom: 64px;
+  scroll-margin-top: 120px; /* высота фиксированного хедера */
 }
 .menu__heading {
   display: flex;
@@ -265,26 +249,10 @@ input {
   gap: 7px;
 }
 .menu__button {
-  border-radius: 24px;
-  border: 1px solid #A26539;
-  background-color: transparent;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
   padding-top: 12.5px;
   padding-bottom: 12.5px;
   width: 120px;
-  color: #A26539;
   font-size: 14px;
-  font-weight: 600;
-  line-height: normal;
-  transition: 0.5s ease;
-  cursor: pointer;
-}
-.menu__button:hover {
-  background-color: #A26539;
-  color: #FFF;
 }
 .menu__button_active {
   background-color: #A26539;
@@ -349,6 +317,7 @@ input {
 }
 
 .reviews {
+  scroll-margin-top: 120px; /* высота фиксированного хедера */
   padding-top: 64px;
   padding-bottom: 64px;
 }
@@ -401,6 +370,7 @@ input {
 .contacts {
   padding-top: 64px;
   padding-bottom: 64px;
+  scroll-margin-top: 120px; /* высота фиксированного хедера */
 }
 .contacts__container {
   display: grid;
@@ -482,12 +452,7 @@ input {
 .contacts__button {
   align-self: stretch;
   padding: 14px 48px 16px 48px;
-  border-radius: 24px;
-  border: 1px solid #A26539;
-  background-color: transparent;
-  color: #A26539;
   font-size: 14px;
-  font-weight: 600;
   line-height: 1.072;
 }
 .contacts__map {
@@ -495,6 +460,56 @@ input {
   border-radius: 24px;
   overflow: hidden; /* Обязательно скрыть выход за скругления */
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14);
+}
+
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #FFF;
+  padding-top: 43px;
+  padding-bottom: 43px;
+}
+.footer__logo-box {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.footer__logo-img {
+  display: block;
+}
+.footer__copyright {
+  color: #9A9A9A;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-end;
+}
+.footer__menu {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 48px;
+}
+.footer__menu-link {
+  color: #45403D;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+}
+.footer__icon-box {
+  width: 42px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer__icon {
+  display: block;
 }
 
 [class*=copyrights-pane] {
